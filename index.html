@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Catcher</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Background Elements -->
+        <div class="background-anim"></div>
+
+        <!-- Loading Page -->
+        <section id="loading-page" class="active-page">
+            <div class="loader-content">
+                <div class="logo-glow">Neon Catcher</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="loading-bar"></div>
+                </div>
+                <p class="loading-text">Initializing Game Engine...</p>
+            </div>
+        </section>
+
+        <!-- Home Page -->
+        <section id="home-page" class="hidden-page">
+            <div class="menu-card glass-panel">
+                <h1 class="main-title">Neon Catcher</h1>
+                <p class="subtitle">Catch the Falling Orbs!</p>
+                <button id="btn-start" class="primary-btn pulse-anim">Play Game</button>
+                <button id="btn-instructions" class="secondary-btn">How to Play</button>
+                <div class="sound-toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="sound-toggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="sound-label">Sound FX & Music</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Level Selection Page -->
+        <section id="level-page" class="hidden-page">
+            <div class="levels-card glass-panel">
+                <h2>Select Level</h2>
+                <div class="levels-grid" id="levels-grid">
+                    <!-- Levels injected by JS -->
+                </div>
+                <button id="btn-back-home" class="secondary-btn small-btn">Back</button>
+            </div>
+        </section>
+
+        <!-- Game Page -->
+        <section id="game-page" class="hidden-page">
+            <div class="game-ui-layer">
+                <div class="score-board glass-panel-mini">
+                    <span>Score: <span id="score-display">0</span></span>
+                    <span>Level: <span id="level-display">1</span></span>
+                </div>
+                <div class="lives-board glass-panel-mini">
+                    Lives: <span id="lives-display">❤️❤️❤️</span>
+                </div>
+                <button id="btn-pause" class="icon-btn">⏸️</button>
+            </div>
+
+            <canvas id="game-canvas"></canvas>
+
+            <!-- Game Over / Pause Modal -->
+            <div id="game-modal" class="modal hidden-modal">
+                <div class="modal-content glass-panel">
+                    <h2 id="modal-title">Game Over</h2>
+                    <p id="modal-message">Your Score: 100</p>
+                    <div class="modal-buttons">
+                        <button id="btn-restart" class="primary-btn">Try Again</button>
+                        <button id="btn-quit" class="secondary-btn">Main Menu</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instructions Modal -->
+        <div id="instructions-modal" class="modal hidden-modal">
+            <div class="modal-content glass-panel">
+                <h2>How to Play</h2>
+                <ul class="instructions-list">
+                    <li>🖱️ Move your mouse or drag to control the basket.</li>
+                    <li>🔴 Catch the Glowing Orbs to score points.</li>
+                    <li>⚠️ Avoid the Red Spikes (if any) or missing balls!</li>
+                    <li>✨ Complete levels to unlock new speeds.</li>
+                </ul>
+                <button id="btn-close-instructions" class="primary-btn">Got it!</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
