@@ -10,7 +10,7 @@ A beautiful, interactive "Catch the Falling Balls" game built with modern HTML5,
 - **progression**: 6 Levels with increasing difficulty.
 
 ## How to Play
-1. **Open the Game**: Double-click `index.html` to launch it in your web browser (Chrome, Edge, Firefox recommended).
+1. **Open the Game**: Double-click `index.html`to launch it in your web browser (Chrome, Edge, Firefox recommended).
 2. **Controls**: Move your mouse or drag your finger to control the basket.
 3. **Goal**: Catch the falling balls to score points. Avoid missing them!
 4. **Levels**: Score 100 points to advance to the next level.
